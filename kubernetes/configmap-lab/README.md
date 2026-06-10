@@ -20,3 +20,12 @@ kubectl apply -f configmap.yaml
 kubectl apply -f deployment.yaml
 kubectl expose deployment nginx-configmap-demo --port=80 --type=NodePort
 kubectl exec -it deployment/nginx-configmap-demo -- cat /usr/share/nginx/html/index.html
+
+## Skills Demonstrated
+
+- ConfigMap creation
+- ConfigMap mounting
+- Deployment management
+- Service exposure
+- Pod restart and rollout
+- Configuration injection
