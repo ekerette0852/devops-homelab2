@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: github-actions-k8s-deploy-lab-service
+
+spec:
+  selector:
+    app: github-actions-k8s-deploy-lab
+
+  ports:
+  - port: 80
+    targetPort: 80
+
+  type: ClusterIP

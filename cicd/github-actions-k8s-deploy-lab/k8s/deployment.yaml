@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: github-actions-k8s-deploy-lab
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: github-actions-k8s-deploy-lab
+
+  template:
+    metadata:
+      labels:
+        app: github-actions-k8s-deploy-lab
+
+    spec:
+      containers:
+      - name: web
+
+        image: ekerette/github-actions-k8s-deploy-lab:v1.0.0
+
+        ports:
+        - containerPort: 80
