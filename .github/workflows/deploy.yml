@@ -21,7 +21,7 @@ jobs:
 
       - name: Build Image
         run: |
-          docker build -t ekerette/github-actions-k8s-deploy-lab:v1.0.${{ github.run_number }} ./cicd/github-actions-k8s-deploy-la/app
+          docker build -t ekerette/github-actions-k8s-deploy-lab:v1.0.${{ github.run_number }} ./cicd/github-actions-k8s-deploy-lab/app
 
       - name: Push Image
         run: |
