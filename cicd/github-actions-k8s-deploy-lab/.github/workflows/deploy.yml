@@ -1,0 +1,37 @@
+name: Build Push and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Docker Login
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build Image
+        run: |
+          docker build -t ekerette/github-actions-k8s-deploy-lab:v1.0.${{ github.run_number }} ./app
+
+      - name: Push Image
+        run: |
+          docker push ekerette/github-actions-k8s-deploy-lab:v1.0.${{ github.run_number }}
+
+      - name: Deploy with Helm
+        run: |
+          helm upgrade github-actions-lab /home/jesse/homelab/helm/github-actions-k8s-deploy-lab \
+            --set image.tag=v1.0.${{ github.run_number }}
+
+      - name: Verify Rollout
+        run: |
+          kubectl rollout status deployment/github-actions-lab-github-actions-k8s-deploy-lab
