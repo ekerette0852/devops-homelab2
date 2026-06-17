@@ -1,0 +1,7 @@
+image:
+  repository: ekerette/github-actions-k8s-deploy-lab
+  tag: latest
+
+ingress:
+  enabled: true
+  host: app-helm.homelab.local
