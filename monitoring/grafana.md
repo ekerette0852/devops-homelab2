@@ -106,6 +106,67 @@ Results confirmed:
 
 ---
 
+# Grafana Monitoring
+
+## Overview
+
+Grafana was deployed as part of the kube-prometheus-stack and configured to visualize metrics collected by Prometheus.
+
+---
+
+## Data Source Configuration
+
+Grafana was configured to use Prometheus as the primary data source.
+
+![Grafana Data Source](screenshots/grafana-datasource.png)
+
+Status: Connected
+
+---
+
+## Node Exporter Dashboard
+
+Imported the Node Exporter Full dashboard to visualize infrastructure metrics.
+
+![Node Exporter Dashboard](screenshots/node-exporter-dashboard.png)
+
+Metrics available:
+
+- CPU Usage
+- Memory Usage
+- Disk Utilization
+- Network Traffic
+- System Load
+- Uptime
+
+---
+
+## Monitoring Validation
+
+Verified successful visualization of:
+
+- CPU metrics
+- Memory metrics
+- Disk metrics
+- Network metrics
+
+Status: Healthy
+
+---
+
+## Outcome
+
+Successfully built a Kubernetes monitoring stack using:
+
+- Prometheus
+- Grafana
+- Node Exporter
+- kube-prometheus-stack
+
+This provides real-time observability into cluster and node performance.
+
+---
+
 ## Troubleshooting
 
 ### Issue
