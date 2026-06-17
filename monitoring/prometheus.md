@@ -123,6 +123,9 @@ Verified collection of metrics from:
 
 - Prometheus
 - Node Exporter
+- kube-state-metrics
+- kubelet
+
 
 Status: Healthy
 ---
