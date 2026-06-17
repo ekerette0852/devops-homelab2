@@ -108,6 +108,23 @@ Verified targets included:
 * prometheus
 * alertmanager
 
+
+# Prometheus Monitoring
+
+## Targets
+
+Prometheus successfully discovered and scraped monitoring targets.
+
+![Prometheus Targets](screenshots/prometheus-targets.png)
+
+## Metrics Collection
+
+Verified collection of metrics from:
+
+- Prometheus
+- Node Exporter
+
+Status: Healthy
 ---
 
 ## Node Exporter Troubleshooting
