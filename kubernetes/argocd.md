@@ -41,6 +41,28 @@ Verified pods:
 
 Status: Healthy
 
+## GitOps Validation
+
+Updated Helm chart replica count from 5 to 3 in Git.
+
+Result:
+
+- Argo CD detected repository change
+- Application moved OutOfSync
+- Automatic synchronization executed
+- Kubernetes deployment updated successfully
+
+Verification:
+
+kubectl describe deployment nginx-demo-nginx-chart -n default
+
+Replicas:
+3 desired | 3 updated | 3 total | 3 available
+
+Status:
+Healthy
+Synced
+
 ## Skills Demonstrated
 
 - GitOps
