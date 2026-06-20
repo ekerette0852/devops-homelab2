@@ -1,1 +1,0 @@
-Terraform is managing infrastructure as code for my DevOps homelab.

@@ -6,3 +6,6 @@
 
 # Keep lock files
 !.terraform.lock.hcl
+
+# Generated files
+homelab.txt
