@@ -53,3 +53,26 @@ ekerette-devops-homelab-s3-lab-136913568034
 ## Outcome
 
 Successfully provisioned an AWS S3 bucket using Terraform and verified deployment through the AWS CLI.
+
+## Cloud Projects
+
+
+### Terraform AWS S3 Lab
+
+Provisioned AWS infrastructure using Terraform.
+
+Technologies:
+- Terraform
+- AWS IAM
+- AWS S3
+- AWS CLI
+
+Skills Demonstrated:
+- IAM User Management
+- Access Key Configuration
+- Terraform State Management
+- Infrastructure as Code (IaC)
+- AWS Authentication
+
+Project:
+terraform/aws-s3-lab
