@@ -114,6 +114,22 @@ Configured Rules:
 
 ---
 
+## Infrastructure Lifecycle
+
+The infrastructure was successfully:
+
+- Planned using Terraform
+- Deployed to Aws
+- Verified in the AWS Console
+- Destroyed using Terraform to prevent unnecessary resource consumption
+
+### Destroy Command
+
+```bash
+terraform destroy
+
+---
+
 ## Lessons Learned
 
 * How Security Groups control traffic in AWS
