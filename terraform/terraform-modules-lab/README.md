@@ -10,13 +10,10 @@ Badges (Terraform • AWS • Linux)
 
 ---
 
+
 ## Architecture Diagram
 
-<p align="center">
-  <img src="./architecture/terraform-modules-lab-architecture.png"
-       alt="Terraform Modules Lab Architecture"
-       width="100%">
-</p>
+![Terraform Modules Lab Architecture](./architecture/terraform-modules-lab-architecture.png)
 
 ## Project Structure
 
