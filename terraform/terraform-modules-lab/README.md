@@ -19,9 +19,26 @@ Badges (Terraform • AWS • Linux)
        width="100%">
 </p>
 
+
 ## Project Structure
 
-(Folder tree)
+```text
+terraform-modules-lab/
+├── architecture/
+│   └── terraform-modules-lab-architecture.png
+├── modules/
+│   ├── network/
+│   └── ec2/
+├── screenshots/
+│   ├── terraform-init.png
+│   ├── terraform-validate.png
+│   ├── terraform-plan.png
+│   ├── terraform-apply.png
+│   └── terraform-destroy.png
+├── main.tf
+├── versions.tf
+└── README.md
+```
 
 ---
 
@@ -39,17 +56,25 @@ Badges (Terraform • AWS • Linux)
 
 ## Screenshots
 
-(terraform init)
+### Terraform Init
 
-(terraform validate)
+![Terraform Init](./screenshots/terraform-init.png)
 
-(terraform plan)
+### Terraform Validate
 
-(terraform apply)
+![Terraform Validate](./screenshots/terraform-validate.png)
 
-(terraform destroy)
+### Terraform Plan
 
-(terraform destroy)
+![Terraform Plan](./screenshots/terraform-plan.png)
+
+### Terraform Apply
+
+![Terraform Apply](./screenshots/terraform-apply.png)
+
+### Terraform Destroy
+
+![Terraform Destroy](./screenshots/terraform-destroy.png)
 
 ---
 
