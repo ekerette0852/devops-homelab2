@@ -29,3 +29,11 @@ variable "availability_zone_1" {
 variable "availability_zone_2" {
   type = string
 }
+
+variable "ami_id" {
+  type = string
+}
+
+variable "instance_type" {
+  type = string
+}
