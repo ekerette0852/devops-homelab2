@@ -49,3 +49,29 @@ resource "aws_security_group" "ec2_sg" {
     Name = "${var.project_name}-ec2-sg"
   }
 }
+
+resource "aws_security_group" "db_sg" {
+  name        = "${var.project_name}-db-sg"
+  description = "Allow MySQL traffic from EC2 only"
+  vpc_id      = var.vpc_id
+
+  ingress {
+    description     = "MySQL from EC2 security group"
+    from_port       = 3306
+    to_port         = 3306
+    protocol        = "tcp"
+    security_groups = [aws_security_group.ec2_sg.id]
+  }
+
+  egress {
+    description = "Allow outbound traffic"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "${var.project_name}-db-sg"
+  }
+}
