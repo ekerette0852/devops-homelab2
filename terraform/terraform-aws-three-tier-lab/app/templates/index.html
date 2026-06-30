@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Terraform AWS Three-Tier Lab</title>
+</head>
+
+<body>
+
+<h1>Terraform AWS Three-Tier Lab</h1>
+
+<h2>Database Status</h2>
+
+<p>Status:
+<strong>{{ status }}</strong>
+</p>
+
+{% if db_time %}
+
+<p>Database Time:
+{{ db_time }}
+</p>
+
+{% endif %}
+
+{% if error %}
+
+<p style="color:red">
+{{ error }}
+</p>
+
+{% endif %}
+
+</body>
+
+</html>
